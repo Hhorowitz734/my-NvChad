@@ -13,6 +13,18 @@ return {
     end,
   },
 
+  
+  {
+    "stevearc/oil.nvim",
+    lazy = false,
+    cmd = "Oil",
+    opts = {
+      view_options = { show_hidden = true },
+    },
+  },
+
+
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
