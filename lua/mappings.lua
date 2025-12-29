@@ -24,3 +24,11 @@ map("n", "<leader>e", function()
 end, { desc = "LSP diagnostic under cursor" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- Treesitter function textobjects
+map({ "o", "x" }, "af", function()
+  require("nvim-treesitter.textobjects.select").select_textobject("@function.outer")
+end, { desc = "around function" })
+
+map({ "o", "x" }, "if", function()
+  require("nvim-treesitter.textobjects.select").select_textobject("@function.inner")
+end, { desc = "inside function" })
